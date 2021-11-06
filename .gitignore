@@ -1,0 +1,7 @@
+*.[oa]
+*.dSYM
+*.swp
+.DS_Store
+
+test.c
+a.out
