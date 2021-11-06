@@ -23,6 +23,11 @@ KEVAS * kevas_new(void)
 	return (store);
 }
 
+void kevas_destroy(KEVAS * store)
+{
+	// TODO: implement
+}
+
 void * kevas_get(KEVAS * store, char * key)
 {
 	uint64_t index;
@@ -127,8 +132,6 @@ int kevas_pop(KEVAS * store, char * key, void ** old)
 		return (1);
 	}
 
-	printf("index: %llu\n", entry_index);
-
 	memcpy(new_entries, row->entries, entry_index * sizeof(kevas_entry_t **));
 
 	memcpy(new_entries + entry_index, row->entries + entry_index + 1, (row->size - entry_index - 1) * sizeof(kevas_entry_t **));
@@ -144,6 +147,7 @@ int kevas_pop(KEVAS * store, char * key, void ** old)
 	return (0);
 }
 
+// TODO: remove or modify for prod
 void kevas_print(KEVAS * store)
 {
 	printf("start\n");

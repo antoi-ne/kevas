@@ -5,11 +5,14 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+// TODO: private & public headers, 
+
 typedef struct kevas_entry_s kevas_entry_t;
 typedef struct kevas_row_s kevas_row_t;
 typedef struct kevas_s kevas_t;
 typedef kevas_t KEVAS;
 
+// TODO: data types (PTR, STR, BOOL, INT, FLOAT, JSON (cJSON?), etc)
 struct kevas_entry_s
 {
 	char * key;
@@ -22,6 +25,9 @@ struct kevas_row_s
 	kevas_entry_t ** entries;
 };
 
+// TODO: hash function option
+// TODO: table size option
+// TODO: allocators option
 struct kevas_s
 {
 	size_t table_size;
